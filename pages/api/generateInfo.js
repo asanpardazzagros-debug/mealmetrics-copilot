@@ -26,7 +26,7 @@ const generateInfo = async (req, res) => {
   
     try {
       const completion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o-mini",
         messages: [{ role: "user", content: `${recipePrompt}${recipe}` }],
         max_tokens: 200,
         temperature: 0,

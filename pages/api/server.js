@@ -10,9 +10,13 @@ Create a server with the following specifications:
 
 const express = require('express');
 const dotenv = require('dotenv').config();
+const cors = require('cors');
 const PORT = 8080
 
 const app = express();
+
+// Enable CORS
+app.use(cors());
 
 // enable body parser to accept json data
 app.use(express.json());
